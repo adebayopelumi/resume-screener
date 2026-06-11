@@ -21,10 +21,27 @@ st.set_page_config(
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
 
-*, *::before, *::after {
+/* Apply monospace globally but NOT to icon elements */
+*:not(.material-icons):not(.material-icons-round):not([class*="material"]) {
     font-family: 'JetBrains Mono', 'Courier New', monospace !important;
 }
+
+/* Restore Material Icons font for sidebar toggle */
+[data-testid="stSidebarCollapsedControl"] span,
+[data-testid="stSidebarCollapsedControl"] button span,
+button[kind="header"] span,
+.material-icons, .material-icons-round {
+    font-family: 'Material Icons Round' !important;
+}
+
+/* Hide Streamlit chrome */
+#MainMenu { visibility: hidden !important; }
+footer { visibility: hidden !important; }
+[data-testid="stToolbar"] { display: none !important; }
+[data-testid="stDecoration"] { display: none !important; }
+[data-testid="stStatusWidget"] { display: none !important; }
 
 /* Base */
 html, body, .stApp {
@@ -181,6 +198,9 @@ details[open] > summary { color: #888888 !important; border-bottom: 1px solid #1
 [data-testid="stSidebar"] {
     background-color: #030303 !important;
     border-right: 1px solid #111111 !important;
+    min-width: 200px !important;
+    max-width: 200px !important;
+    width: 200px !important;
 }
 [data-testid="stSidebar"] * { color: #555555 !important; }
 [data-testid="stSidebar"] hr { border-color: #111111 !important; }
