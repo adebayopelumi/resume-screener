@@ -383,7 +383,7 @@ if mode == "Single Resume":
         fig_bar.update_xaxes(range=[0, 100], showgrid=False, ticksuffix="%",
                              tickfont=dict(size=10, color="#333333"))
         fig_bar.update_yaxes(showticklabels=False, showgrid=False)
-        fig_bar.update_layout(**PLOTLY_BASE, height=80, margin=dict(t=20, b=10, l=0, r=0))
+        fig_bar.update_layout(**{**PLOTLY_BASE, "margin": dict(t=20, b=10, l=0, r=0)}, height=80)
         st.plotly_chart(fig_bar, use_container_width=True, config={"displayModeBar": False})
 
         st.markdown('<div class="section-label">Skill Breakdown</div>', unsafe_allow_html=True)
@@ -483,7 +483,7 @@ else:
         fig_b.update_xaxes(showgrid=False, tickfont=dict(size=10, color="#555555"))
         fig_b.update_yaxes(range=[0, 115], showgrid=True, gridcolor="#0a0a0a",
                            ticksuffix="%", tickfont=dict(size=10, color="#333333"))
-        fig_b.update_layout(**PLOTLY_BASE, height=300, margin=dict(t=20, b=10, l=0, r=0))
+        fig_b.update_layout(**{**PLOTLY_BASE, "margin": dict(t=20, b=10, l=0, r=0)}, height=300)
         st.plotly_chart(fig_b, use_container_width=True, config={"displayModeBar": False})
 
         st.markdown('<div class="section-label">Leaderboard</div>', unsafe_allow_html=True)
