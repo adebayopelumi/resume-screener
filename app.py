@@ -197,13 +197,17 @@ details[open] > summary { color: #888888 !important; border-bottom: 1px solid #1
 /* Sidebar */
 [data-testid="stSidebar"] {
     background-color: #030303 !important;
-    border-right: 1px solid #111111 !important;
+    border-right: 1px solid #1a1a1a !important;
     min-width: 200px !important;
     max-width: 200px !important;
     width: 200px !important;
 }
-[data-testid="stSidebar"] * { color: #555555 !important; }
-[data-testid="stSidebar"] hr { border-color: #111111 !important; }
+[data-testid="stSidebar"] * { color: #aaaaaa !important; }
+[data-testid="stSidebar"] hr { border-color: #1a1a1a !important; }
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] label { color: #aaaaaa !important; }
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p { color: #888888 !important; }
 
 /* Alert boxes */
 [data-baseweb="notification"] {
@@ -270,7 +274,7 @@ details[open] > summary { color: #888888 !important; border-bottom: 1px solid #1
 .stat-lbl { font-size: 10px; color: #333333; text-transform: uppercase; letter-spacing: 2px; margin-top: 2px; }
 .section-label {
     font-size: 10px;
-    color: #333333;
+    color: #666666;
     text-transform: uppercase;
     letter-spacing: 3px;
     padding-left: 12px;
@@ -362,7 +366,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown('<div class="section-label" style="margin-top:0">Stack</div>', unsafe_allow_html=True)
     st.markdown("""
-    <div style="font-size:12px; color:#333; line-height:2.2">
+    <div style="font-size:12px; color:#888888; line-height:2.4">
     ▸ all-MiniLM-L6-v2<br>
     ▸ Cosine similarity<br>
     ▸ Regex skill extract<br>
