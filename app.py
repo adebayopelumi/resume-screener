@@ -435,7 +435,7 @@ if mode == "Single Resume":
                     angularaxis=dict(color="#333333", gridcolor="#111111",
                                     tickfont=dict(size=9, color="#555555")),
                 ),
-                legend=dict(font=dict(size=10, color="#555555"), bgcolor="transparent"),
+                legend=dict(font=dict(size=10, color="#555555"), bgcolor="rgba(0,0,0,0)"),
             )
             st.plotly_chart(fig_r, use_container_width=True, config={"displayModeBar": False})
 
