@@ -1,12 +1,3 @@
-# ResumeInt
-
-<p align="center">
-  <img src="ResumeInt.jpeg" alt="ResumeInt logo" width="220" />
-</p>
-
-<p align="center">
-  <strong>An NLP-powered resume screener for comparing candidates against job descriptions.</strong>
-</p>
 
 ResumeInt analyzes resumes using sentence embeddings, cosine similarity, and automated skill extraction. It supports both single-resume analysis and batch candidate ranking through a custom Streamlit interface.
 
